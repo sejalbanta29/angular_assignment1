@@ -1,0 +1,15 @@
+<h1>This is my first app in angular</h1>
+<hr>
+<app-user-list></app-user-list>
+
+<h1>Get input from user</h1>
+<br>
+
+ <!-- input field to capture username and applied two way binding  -->
+<label>Username: </label>
+
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>{{ username }}</p>
+<br>
+<!-- button to clear the username and enabled the button ig input field has some value-->
+<button id="btn" [disabled]="username === ' '" (click) = "handleClear()">Clear the username</button>
